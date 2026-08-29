@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "process",
+      "label": "Build D3D11 Project",
+      "command": "${workspaceFolder}/compiler/bin/g++.exe",
+      "args": [
+        "-std=c++17",
+        "-g",
+        "${workspaceFolder}/main.cpp",
+        "-o",
+        "${workspaceFolder}/main.exe",
+        "-ld3d11",
+        "-ldxgi",
+        "-lgdi32",
+        "-luser32",
+        "-mwindows"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
